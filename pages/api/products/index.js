@@ -36,12 +36,13 @@ async function handler(req, res) {
         });
         await newProduct.save();
         res.status(200).json(newProduct);
+        console.log(newProduct);
       } catch (error) {
         res.status(500).json({ error: error.message });
       }
+
       break;
-    // case "DELETE":
-    //   break;
+
     default:
       return res.status(400).json({ error: "method not supported" });
   }
