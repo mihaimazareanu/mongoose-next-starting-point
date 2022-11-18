@@ -56,8 +56,8 @@ const Products = () => {
         <ul className={styles["product-list"]}>
           {products.map((product) => {
             return (
-              <li key={product.id}>
-                <Link href={`/products/${product.id}`}>{product.name}</Link>
+              <li key={product._id}>
+                <Link href={`/products/${product._id}`}>{product.name}</Link>
               </li>
             );
           })}
