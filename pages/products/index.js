@@ -113,28 +113,25 @@ const Products = () => {
               </>
             );
           })}
-          <form onSubmit={(event) => handleOnSubmit(event)}>
-            <p>Here you can insert a new product</p>
-            <fieldset>
-              <label>
-                Name of the product:
-                <input type="text" name="name" />
-              </label>
-              <br />
-              <label>
-                Category:
-                <input type="text" name="category" />
-              </label>
-              <br />
-              <label>
-                A short description:
-                <textarea rows="2" cols="10" name="detail"></textarea>
-              </label>
-              <br />
-              <button type="submit">Insert new product</button>
-            </fieldset>
-          </form>
         </ul>
+        <form onSubmit={(event) => handleOnSubmit(event)}>
+          <p>Here you can insert a new product</p>
+          <fieldset>
+            <label>
+              Name of the product:
+              <input type="text" name="name" />
+            </label>
+
+            <label>
+              Category:
+              <input type="text" name="category" />
+            </label>
+
+            <label htmlFor="detail">A short description:</label>
+            <textarea id="detail" rows="2" cols="40" name="detail"></textarea>
+            <button type="submit">Insert new product</button>
+          </fieldset>
+        </form>
       </div>
     </>
   );
